@@ -1,0 +1,11 @@
+name: CI workflow
+on: 
+  push: 
+    branches: ["main"] # Event trigger for pushing to main
+  pull_request:
+    branches: ["main"] # Event trigger for pull request from main
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest # Run job when event is triggered above
+    container: python:3.9-slim
